@@ -46,7 +46,8 @@ public class ErrorsOrderFields {
     public void enterDataFirstPageOrder(String name, String surname, String address, int metro, String phoneNumber) {
         driver.findElement(NameButton).sendKeys(name);  // Заполнение поля "Имя"
         driver.findElement(SurnameButton).sendKeys(surname);  // Заполнение поля "Фамилия"
-        driver.findElement(AddressButton).sendKeys(address);  // Заполнение поля "Адрес"
+        driver.findElement(NextButton).click();
+        driver.findElement(AddressButton).sendKeys(address);// Заполнение поля "Адрес"
         driver.findElement(MetroButton).click();  // Нажатие на поле "Станция метро"
 
         // Выбор станции метро из списка
@@ -80,5 +81,4 @@ public class ErrorsOrderFields {
         return driver.findElement(TelError).isDisplayed();
     }
 }
-
 
