@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import static org.junit.Assert.assertTrue;
 
-
 public class LogoYandexScooterTest {
     private WebDriver driver;
     private pageobjects.LogoYandexScooter logoYandexScooter;
@@ -55,7 +54,6 @@ public class LogoYandexScooterTest {
         String actualLink = objMainPage.getHeaderLogoYandexLink();
         String mainYandexUrl = "yandex.ru";
         Assert.assertTrue("Ссылка в логотипе Яндекса некорректна", actualLink.contains(mainYandexUrl));
-
     }
 
     // Тест: клик по логотипу Яндекс открывает главную страницу Яндекс в новой вкладке
@@ -66,7 +64,6 @@ public class LogoYandexScooterTest {
         objMainPage.waitForLoad();
         boolean isOpenedInNewTab = objMainPage.isHeaderLogoYandexLinkOpenedInNewTab();
         Assert.assertTrue("Ссылка логотипа Яндекс не открывается в новой вкладке", isOpenedInNewTab);
-
     }
     //Тест: Логотип Самокат ведет на главную страницу ЯндексСамокат
     // Логика: берем из логотипа ссылку и сравниваем с тестовой

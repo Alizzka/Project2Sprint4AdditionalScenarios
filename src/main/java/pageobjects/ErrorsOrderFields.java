@@ -1,8 +1,6 @@
 package pageobjects;
-
 import org.openqa.selenium.*;
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 

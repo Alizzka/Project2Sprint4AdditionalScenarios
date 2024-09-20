@@ -10,12 +10,10 @@ import pageobjects.ErrorsOrderFields;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class ErrorsOrderFieldsTest {
-
     private WebDriver driver;
     private ErrorsOrderFields errorsOrderFields;
 
@@ -64,40 +62,32 @@ public class ErrorsOrderFieldsTest {
 
         // Ожидание после заполнения каждого поля
         Thread.sleep(3000); // Ожидание 3 секунды
-
         if (expectNameError) {
             assertTrue("Ошибка имени не отображается", errorsOrderFields.isNameErrorVisible());
-
         }
 
         Thread.sleep(3000); // Ожидание 3 секунды
-
         if (expectSurnameError) {
             assertTrue("Ошибка фамилии не отображается", errorsOrderFields.isSurnameErrorVisible());
-
         }
 
         Thread.sleep(3000); // Ожидание 3 секунды
-
         if (expectAddressError) {
             assertTrue("Ошибка адреса не отображается", errorsOrderFields.isAddressErrorVisible());
-
         }
 
         Thread.sleep(3000); // Ожидание 3 секунды
-
         if (expectMetroError) {
             assertTrue("Ошибка метро не отображается", errorsOrderFields.isMetroErrorVisible());
         }
 
         Thread.sleep(3000); // Ожидание 3 секунды
-
         if (expectTelError) {
             assertTrue("Ошибка телефона не отображается", errorsOrderFields.isTelErrorVisible());
         }
     }
 
-    // Тест для проверки отображения ошибок
+    // Тест для проверки отображения ошибок без ожидания для просмотра
     /*@Test
     public void testErrorMessages() {
         errorsOrderFields.clickOrderButtonHeader();
@@ -105,32 +95,24 @@ public class ErrorsOrderFieldsTest {
 
         if (expectNameError) {
             assertTrue("Ошибка имени не отображается", errorsOrderFields.isNameErrorVisible());
-        } else {
-            assertTrue("Ошибка имени отображается", !errorsOrderFields.isNameErrorVisible());
+        //} else {
+            //assertTrue("Ошибка имени отображается", !errorsOrderFields.isNameErrorVisible());
         }
 
-        if (expectSurnameError) {
+        /*if (expectSurnameError) {
             assertTrue("Ошибка фамилии не отображается", errorsOrderFields.isSurnameErrorVisible());
-        } else {
-            assertTrue("Ошибка фамилии отображается", !errorsOrderFields.isSurnameErrorVisible());
         }
 
         if (expectAddressError) {
             assertTrue("Ошибка адреса не отображается", errorsOrderFields.isAddressErrorVisible());
-        } else {
-            assertTrue("Ошибка адреса отображается", !errorsOrderFields.isAddressErrorVisible());
         }
 
         if (expectMetroError) {
             assertTrue("Ошибка метро не отображается", errorsOrderFields.isMetroErrorVisible());
-        } else {
-            assertTrue("Ошибка метро отображается", !errorsOrderFields.isMetroErrorVisible());
         }
 
         if (expectTelError) {
             assertTrue("Ошибка телефона не отображается", errorsOrderFields.isTelErrorVisible());
-        } else {
-            assertTrue("Ошибка телефона отображается", !errorsOrderFields.isTelErrorVisible());
         }
     }*/
 
